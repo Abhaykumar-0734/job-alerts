@@ -77,3 +77,4 @@ if __name__ == "__main__":
     print("✅ Job email sent successfully with Wellfound + LinkedIn results!")
     
 
+
