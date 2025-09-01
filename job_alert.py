@@ -1,3 +1,4 @@
+import os
 import smtplib
 from email.mime.text import MIMEText
 import requests
@@ -7,9 +8,9 @@ from datetime import datetime
 # =========================
 # CONFIGURATION
 # =========================
-SENDER_EMAIL = "abhay.knam@gmail.com"
-SENDER_PASSWORD = "ndgg nmet cevt edbl"  # Gmail App Password
-RECEIVER_EMAIL = "abhaykumar0734@gmail.com"
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
+RECEIVER_EMAIL = os.getenv("RECEIVER_EMAIL")
 
 WELLFOUND_URL = "https://wellfound.com/jobs?query=entry%20level%20software&remote=true"
 
@@ -75,3 +76,4 @@ if __name__ == "__main__":
     send_email(all_jobs)
     print("✅ Job email sent successfully with Wellfound + LinkedIn results!")
     
+
